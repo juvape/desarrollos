@@ -1,0 +1,301 @@
+#mostrar
+{
+  display: block;
+}
+
+#ocultar
+{
+  display: none;
+}
+
+#mostrar-country
+{
+  display: block;
+}
+
+#ocultar-country
+{
+  display: none;
+}
+
+#mostrar-stores
+{
+  display: block;
+}
+
+#ocultar-stores
+{
+  display: none;
+}
+
+#mostrar-category
+{
+  display: block;
+}
+
+#ocultar-category
+{
+  display: none;
+}
+
+#logo
+{
+  border-bottom: 1px solid #3BBFBB;
+  width: 100% !important;
+}
+
+#header
+{
+  background-color: #3BBFBB;
+  width: 100% !important;
+  color: #FFF;
+  padding: 1% 0 0 10%;
+  font-size: 12px;
+}
+
+#img-logo
+{
+  margin: 0 !important;
+}
+
+#container-find-store
+{
+  background-color: #FFF1EE;
+  margin-top: 2%;
+  border-radius: 2px;
+  width: 96% !important;
+  height: 100%;
+  max-height: 1200px;
+}
+
+#regions
+{
+  display: none;
+  color: #434867 !important;
+  font-family: nunitoregular;
+}
+
+#regions input
+{
+    cursor: pointer;
+}
+#regions label
+{
+    cursor: pointer;
+}
+
+#country
+{
+  display: none;
+  color: #434867 !important;
+  font-family: nunitoregular;
+  max-height: 230px;
+  overflow-y: auto;
+}
+
+#country label
+{
+  cursor: pointer;
+}
+
+#country input
+{
+  cursor: pointer;
+}
+
+#stores
+{
+  display: none;
+  color: #434867 !important;
+  font-family: nunitoregular;
+}
+
+#category
+{
+  display: none;
+  color: #434867 !important;
+  font-family: nunitoregular;
+}
+
+#regions label
+{
+  font-weight: normal !important;
+}
+
+#country label
+{
+  font-weight: normal !important;
+}
+
+#stores label
+{
+  font-weight: normal !important;
+}
+
+#category label
+{
+  font-weight: normal !important;
+}
+
+#primary
+{
+  margin-top: -45%;
+  margin-left: 37%;
+  width: 60%;
+  max-width: 750px;
+  max-height: 460px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.find-results
+{
+  font-family: nunitoregular, cursive;
+  color: #3BBFBB;
+}
+
+.no-decoration
+{
+  text-decoration: none !important;
+}
+
+/* .background-table
+{
+  background-color: #FFF1EE;
+} */
+
+.refines-header
+{
+  border-bottom:1px solid #ddd;
+  font-family:nunitoregular;
+  letter-spacing:.0625rem;
+  text-transform:uppercase;
+  border-color:#bababa;
+  border-width:.125rem;
+  padding-top:5%;
+  padding-bottom:8%;
+  font-size: 16px;
+  font-weight:400;
+  color:#434867;
+  height:3.125rem;
+  box-sizing:border-box;
+  line-height:1.5625rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.float-right
+{
+  float: right;
+  margin: -4% 0 0 0;
+}
+
+.store-locator-refines
+{
+  border-top:1px solid #ddd;
+  border-color:#bababa;
+  border-width:.125rem;
+  margin-bottom:2.625rem;
+}
+
+.header-text
+{
+  float: right;
+  margin-right: 10%;
+}
+
+.or
+{
+  margin: -2% 0 2% -10%;
+}
+
+.ocultar
+{
+  display: none;
+}
+
+.centrar
+{
+  text-align: center;
+}
+
+.btn-find
+{
+  background-color: #3BBFBB;
+  color: #FFF;
+  padding: 5px 20px 5px 20px;
+  border-radius: 20px;
+  margin: 2% 0 5% 0;
+  border-color: #3BBFBB;
+  text-transform: uppercase;
+}
+
+.btn-find:hover
+{
+  background-color: #FFF;
+  color: #3BBFBB;
+  padding: 5px 20px 5px 20px;
+  border-radius: 20px;
+  margin: 2% 0 5% 0;
+  border-color: #FFF;
+  text-transform: uppercase;
+}
+
+.footer
+{
+  background-color: #FEF1EF;
+  margin: 2% 0 0 0;
+  padding: 2%;
+  font-family: nunitoregular;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 970px) {
+   table {
+       width:100%;
+   }
+   thead {
+       display: none;
+   }
+   tr:nth-of-type(2n) {
+       background-color: inherit;
+   }
+   tr td:first-child {
+       background: #f0f0f0;
+       font-weight:bold;
+       font-size:1.3em;
+   }
+   tbody td {
+       display: block;
+       text-align:center;
+   }
+   tbody td:before {
+       content: attr(data-th);
+       display: block;
+       text-align:center;
+   }
+
+   #primary
+   {
+     margin-top: 0;
+     margin-left: 5%;
+     width: 95%;
+     max-width: 500px;
+     max-height: 430px;
+     overflow-y: auto;
+     overflow-x: auto;
+   }
+
+   .storeLocatorPageResult
+   {
+     background-color: #FEF1EF;
+     width: 96%;
+     margin-left: 2%;
+     margin-bottom: 2%;
+   }
+
+   .or
+   {
+     margin: -10% 0px 5% 40%;
+   }
+}

@@ -1,0 +1,20 @@
+# This file is - if you set up MINI correctly - not needed.
+# But, for fallback reasons (if you don't route your vhost to /public), it will stay here.
+# RewriteRule ^(css) - [L]
+# RewriteRule ^(js) - [L]
+RewriteEngine on
+
+
+#Redireccionar de www a no www
+#<IfModule mod_rewrite.c>
+  #RewriteCond %{HTTP_HOST} ^www.maajiness.com/formKYC/ [NC]
+  #RewriteRule (.*) https://maajiness.com/formKYC/$1 [R=301,L,QSA]
+#</IfModule>
+
+#Redireccionar de HTTP a HTTPS
+#<IfModule mod_rewrite.c>
+  #RewriteCond %{HTTPS} off
+  #RewriteRule (.*) https://www.maajiness.com/formKYC/$1 [R=301,L,QSA]
+#</IfModule>
+
+RewriteRule ^(.*) public/$1 [L]

@@ -1,0 +1,224 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+body:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -25%;
+	width: 50%;
+	height: 100%;
+	background: #3bbfbb;
+	opacity: 0.8;
+}
+@font-face {
+	font-family: Authenia;
+	src: url('../fonts/fonts-maaji/Authenia.otf');
+}
+@font-face {
+	font-family: Nunito-Regular;
+	font-style: regular;
+	src: url('../fonts/fonts-maaji/Nunito-Regular.ttf');
+}
+.logo
+{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(-100px/2);
+  left: calc(90% - 50%);
+}
+
+.form
+{
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	transform: translate(-50%,-50%);
+	width: 350px;
+	min-height: 400px;
+	background: #fcf8f7 ;
+	box-shadow: 0 15px 50px rgba(0,0,0.5);
+	padding: 50px;
+	box-sizing: border-box;
+}
+.form h2
+{
+	color: #777;
+	margin: 0 0 10px;
+	padding: 0;
+	font-family: Authenia;
+	font-size: 55px;
+	font-weight: normal;
+}
+.form .input-box
+{
+	position: relative;
+	margin: 20px 0;
+}
+.form .input-box input
+{
+	width: 100%;
+	font-size: 16px;
+	border: none;
+	border-bottom: 2px solid #777;
+	outline: none;
+	padding: 10px;
+	padding-left: 25px;
+	box-sizing: border-box;
+	font-weight: bold;
+	color: #777;
+}
+.form .validarEmail input:focus,
+.form .validarEmail input:valid
+{
+	border-bottom: 2px solid #f22012;
+}
+.form .validarPass input:focus,
+.form .validarPass input:valid
+{
+	border-bottom: 2px solid #f22012;
+}
+.form .input-box .fa
+{
+	position: absolute;
+	top: 8px;
+	left: 0;
+	font-size: 18px;
+	color: #777;
+}
+.form .input-box input[type="button"]
+{
+	border-radius: 2px;
+	border: none;
+	cursor: pointer;
+	background: #03a9f4;
+	color: #fff;
+	font-weight: bold;
+	transition: 0.5s;
+	font-family: Nunito-Regular;
+	font-size: 20px;
+	text-align: center;
+}
+.form .input-box input[type="button"]:hover
+{
+	background: #3bbfbb;
+}
+
+.fa-exclamation-triangle
+{
+	color: #A94442;
+}
+
+.error
+{
+	color: #A94442;
+}
+
+.alert-info
+{
+	background-color: #f2e6ae;
+	border-radius: 5px;
+	padding: 1%;
+	margin-bottom: 5%;
+}
+
+.alert-success
+{
+	background-color: #afef94;
+	border-radius: 5px;
+	padding: 1%;
+	margin-bottom: 5%;
+}
+
+.text-format-success
+{
+	color: #5CB85C;
+}
+
+.fa-check
+{
+	color: #5CB85C;
+}
+
+.success
+{
+	color: #5CB85C;
+}
+
+.text-format-info
+{
+	color: #AA6708;
+}
+
+.fa-spinner
+{
+	color: #AA6708;
+}
+
+.text-format
+{
+	color: #A94442;
+}
+
+.alert-danger
+{
+	background-color: #ff9999;
+	border-radius: 5px;
+	padding: 1%;
+	margin-bottom: 5%;
+}
+
+@media screen and (max-width: 600px)
+{
+	.form
+	{
+	position: absolute;
+	top: 50%;
+	left: 48%;
+	transform: translate(-50%,-50%);
+	width: 80%;
+	min-height: 400px;
+	background: #fff;
+	box-shadow: 0 15px 50px rgba(0,0,0.5);
+	padding: 15px;
+	box-sizing: border-box;
+	}
+}
+.input {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 24px;
+	border-bottom: 2px solid rgba(0,0,0,.5);
+	/*font-family: Nunito-Regular;*/
+}
+.inputText {
+	position: absolute;
+	line-height: 50px;
+	font-size: 24px;
+	transition: .5s;
+	opacity: .5;
+	font-family: Nunito-Regular;
+}
+.focus .inputText {
+	transform: translateY(-30px);
+	font-size: 18px;
+	opacity: 1;
+	color: #00bcd4;
+}
+.inputBox, .inputBoxPass {
+	position: relative;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	padding: 10px;
+}

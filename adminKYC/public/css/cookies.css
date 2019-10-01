@@ -1,0 +1,50 @@
+#overbox3 {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 999999;
+  display: block;
+  padding: 20px;
+}
+#infobox3 {
+  margin: auto;
+  position: relative;
+  top: 0px;
+  height: 58px;
+  width: 100%;
+  text-align:center;
+  background-color: #eeeeee;
+}
+#infobox3 p {
+  line-height:58px;
+  font-size:14px;
+  text-align:center;
+}
+#infobox3 p a {
+  margin-right:5px;
+  text-decoration: underline;
+}
+
+/*Estilos pantalla de cookies*/
+.container-cookie{
+  width: 95%;
+  max-width: 700px;
+  min-height: 400px;
+  margin: 80px auto 30px auto;
+  padding: 20px 40px;
+  border: 2px dashed #09F;
+  border-radius: 20px;
+  background-color: #FFF;
+  text-align: justify;
+}
+
+.title-bar-cookie{
+  border-radius: 0px 20px 0px 20px;
+  margin-bottom: -40px;
+  padding: 15px;
+  background-color: #FFF;
+  color: #656565;
+  font-size: xx-large;
+}
+/* Fin estilos pantalla cookies */

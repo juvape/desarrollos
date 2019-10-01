@@ -1,0 +1,376 @@
+body
+{
+  margin: 0;
+  padding: 0;
+}
+
+.slidebar
+{
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 1250px;
+  background: #fff1ee;
+  transition: .5s;
+  padding: 20px;
+  text-align: left;
+  box-sizing: border-box;
+}
+.slidebar.active
+{
+    left: 0;
+}
+.slidebar .menu
+{
+  padding: 0;
+}
+.slidebar .menu li
+{
+    list-style: none;
+    font-family: sans-serif;
+}
+.slidebar .menu li a
+{
+    display: block;
+    padding: 5px 0;
+    font-family: Nunito-Regular;
+    color: #434867;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.slidebar .menu li ul
+{
+    position: absolute;
+    left: 0;
+    display: none;
+}
+.slidebar .menu li.active ul
+{
+    display: block;
+}
+.slidebar .menu li ul li
+{
+    display: block;
+    width: 200px;
+}
+.slidebar .menu li.sub-menu:before
+{
+    content: '\f107';
+    font-family: fontAwesome;
+    position: absolute;
+    line-height: 30px;
+    color: #000000;
+    right: 28%;
+    font-size: 20px;
+}
+.slidebar .menu li.active.sub-menu:before
+{
+    content: '\f106';
+}
+.slidebar .menu li.active ul
+{
+    position: relative;
+  left: -43px;
+}
+.dropa
+{
+  cursor: pointer;
+  border-bottom: 2px solid #BABABA;
+  margin-bottom: 5%;
+}
+
+@font-face {
+    font-family: Authenia;
+    src: url('../fonts/fonts-maaji/Authenia.otf');
+}
+
+@font-face {
+    font-family: Nunito-Regular;
+    src: url('../fonts/fonts-maaji/Nunito-Regular.ttf');
+}
+
+#storelocator_location_usa
+{
+  font-family: Nunito-Regular;
+}
+
+.title-find
+{
+  font-family: Authenia;
+  color: #3BBFBB;
+  font-size: 50px;
+  margin-top: 5%;
+}
+
+.nunito
+{
+  font-family: Nunito-Regular;
+}
+
+.table-header
+{
+  font-family: Nunito-Regular;
+}
+
+#logo
+{
+  border-bottom: 1px solid #3BBFBB;
+  width: 100% !important;
+}
+
+#header
+{
+  background-color: #3BBFBB;
+  width: 100% !important;
+  color: #FFF;
+  padding: 1% 0 0 10%;
+  font-size: 12px;
+}
+
+img-logo
+{
+  margin: 0 !important;
+}
+
+#container-find-store
+{
+  background-color: #FFF1EE;
+  margin-top: 2%;
+  border-radius: 2px;
+  width: 96% !important;
+  height: 100%;
+  max-height: 1230px;
+}
+
+.menu
+{
+  margin-right: 20%;
+}
+
+.css-label
+{
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#regions input
+{
+    cursor: pointer;
+}
+
+#regions label
+{
+    cursor: pointer;
+}
+
+#country
+{
+  color: #434867 !important;
+  font-family: Nunito-Regular;
+  max-height: 230px;
+  overflow-y: auto;
+  width: 110%;
+  font-size: 12px;
+}
+
+#country label
+{
+  cursor: pointer;
+}
+
+#country input
+{
+  cursor: pointer;
+}
+
+ #stores
+{
+  color: #434867 !important;
+  font-family: Nunito-Regular;
+}
+
+#category
+{
+  color: #434867 !important;
+  font-family: Nunito-Regular;
+}
+
+#regions label
+{
+  font-weight: normal !important;
+}
+
+#country label
+{
+  font-weight: normal !important;
+}
+
+#stores label
+{
+  font-weight: normal !important;
+}
+
+#category label
+{
+  font-weight: normal !important;
+}
+
+#primary
+{
+  margin-top: -40%;
+  margin-left: 32%;
+  width: 67%;
+  max-width: 860px;
+  max-height: 460px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.find-results
+{
+  font-family: Authenia;
+  color: #3BBFBB;
+  font-size: 55px;
+}
+
+.no-decoration
+{
+  text-decoration: none !important;
+}
+
+.refines-header
+{
+  border-bottom:1px solid #ddd;
+  font-family: Nunito-Regular;
+  letter-spacing:.0625rem;
+  text-transform:uppercase;
+  border-color:#bababa;
+  border-width:.125rem;
+  padding-top:5%;
+  padding-bottom:8%;
+  font-size: 16px;
+  font-weight:400;
+  color:#434867;
+  height:3.125rem;
+  box-sizing:border-box;
+  line-height:1.5625rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.float-right
+{
+  float: right;
+  margin: -4% 0 0 0;
+}
+
+.store-locator-refines
+{
+  border-top:1px solid #ddd;
+  border-color:#bababa;
+  border-width:.125rem;
+  margin-bottom:2.625rem;
+}
+
+.header-text
+{
+  float: right;
+  margin-right: 10%;
+}
+
+.or
+{
+  margin: -5% 0 25% 40%;
+  font-family: Nunito-regular;
+}
+
+.centrar
+{
+  text-align: center;
+}
+
+.btn-find
+{
+  background-color: #3BBFBB;
+  color: #FFF;
+  padding: 5px 20px 5px 20px;
+  border-radius: 20px;
+  margin: 2% 0 5% 0;
+  border-color: #3BBFBB;
+  text-transform: uppercase;
+  font-family: Nunito-Regular;
+}
+
+.btn-find:hover
+{
+  background-color: #FFF;
+  color: #3BBFBB;
+  padding: 5px 20px 5px 20px;
+  border-radius: 20px;
+  margin: 2% 0 5% 0;
+  border-color: #FFF;
+  text-transform: uppercase;
+  font-family: Nunito-Regular;
+}
+
+.footer
+{
+  background-color: #FEF1EF;
+  margin: 2% -1% 0 -1%;
+  padding: 2%;
+  font-family: Nunito-Regular;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 990px) {
+   table {
+       width:100%;
+   }
+   thead {
+       display: none;
+   }
+   tr:nth-of-type(2n) {
+       background-color: inherit;
+   }
+   tr td:first-child {
+       background: #f0f0f0;
+       font-weight:bold;
+       font-size:1.3em;
+   }
+   tbody td {
+       display: block;
+       text-align:left;
+   }
+   tbody td:before {
+       content: attr(data-th);
+       display: block;
+       text-align:left;
+   }
+
+   #primary
+   {
+     margin-top: 0;
+     margin-left: 5%;
+     width: 95%;
+     max-width: 500px;
+     max-height: 430px;
+     overflow-y: auto;
+     overflow-x: auto;
+   }
+
+   .storeLocatorPageResult
+   {
+     background-color: #FEF1EF;
+     width: 96%;
+     margin-left: 2%;
+     margin-bottom: 2%;
+   }
+
+   .or
+   {
+     margin: 0 0 8% 45%;
+   }
+}
