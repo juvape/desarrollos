@@ -55,5 +55,8 @@
     <!-- Datepicker -->
     <link rel="stylesheet" href="<?php echo URL ?>css/datepicker.css">
 
+    <!-- Select2  -->
+    <link rel="stylesheet" href="<?php echo URL ?>css/select2.min.css">
+
 </head>
 <body background="<?= URL; ?>img/fondo.jpg">

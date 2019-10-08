@@ -3,9 +3,19 @@
 class mdlClientes
 {
 
-  private $idUsuario;
+  private $idCustomer;
+  private $userName;
+  private $companyName;
+  private $brandName;
   private $email;
-  private $password;
+  private $phone;
+  private $website;
+  private $facebook;
+  private $instagram;
+  private $twitter;
+  private $pinterest;
+  private $createdAt;
+  private $dateUpdated;
   private $db;
 
   public function __SET($attr, $valor)
@@ -72,6 +82,24 @@ class mdlClientes
   {
     $sql = "CALL SP_consultarSoloFinalizado()";
     $stm = $this->db->prepare($sql);
+    $stm->execute();
+    return $stm->fetchAll(PDO::FETCH_ASSOC);
+  }
+// ****
+  public function listarInfoIndex1()
+  {
+    $sql = "CALL SP_listarInfoIndex1(?)";
+    $stm = $this->db->prepare($sql);
+    $stm->bindParam(1, $this->idCustomer);
+    $stm->execute();
+    return $stm->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  public function listarInfoIndex2()
+  {
+    $sql = "CALL SP_listarInfoIndex2(?)";
+    $stm = $this->db->prepare($sql);
+    $stm->bindParam(1, $this->idCustomer);
     $stm->execute();
     return $stm->fetchAll(PDO::FETCH_ASSOC);
   }

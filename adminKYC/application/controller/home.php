@@ -1,10 +1,11 @@
 <?php
-    use Dompdf\Dompdf;
+  use Dompdf\Dompdf;
 
 class Home extends Controller
 {
   private $mdlUdsuarios;
   private $mdlClientes;
+  private $mdlPaises;
 
   private function Encrypt($string)
   {
@@ -22,6 +23,7 @@ class Home extends Controller
   {
     $this->mdlUdsuarios = $this->loadModel("mdlUsuarios");
     $this->mdlClientes = $this->loadModel("mdlClientes");
+    $this->mdlPaises = $this->loadModel("mdlPaises");
   }
 
   public function inicioSesion()
@@ -37,6 +39,7 @@ class Home extends Controller
         $_SESSION['SESION_INICIADA'] == TRUE)
     {
       $clientes = $this->mdlClientes->listarInfoClientes();
+      $paises = $this->mdlPaises->listarPaises();
 
       require APP . 'view/_templates/header.php';
       require APP . 'view/home/tablaInfoCustomers.php';
@@ -100,21 +103,6 @@ class Home extends Controller
     header("Content-Disposition: attachment;filename=Client_report.xls");
     header("Pragma: no-cache");
     header("Expires: 0");
-
-    // //Consultar información Tabla Customers
-    // $excel = $this->mdlClientes->listarInfoClientes();
-    //
-    // //Consultar información tabla addresses y tabla shippingaddress
-    // $excel2 = $this->mdlClientes->listarInfoAddress();
-    //
-    // //Consultar información Tabla buyers y buyerscontacts
-    // $excel3 = $this->mdlClientes->listarInfoBuyers();
-    //
-    // //Consultar información Tabla business y businesslocations
-    // $excel4 = $this->mdlClientes->listarInfoBusiness();
-    //
-    // //Unimos todos los arrays para poder mostrar todos los campos en el reporte
-    // $union = array_merge($excel, $excel2, $excel3, $excel4);
 
     $queryAll = $this->mdlClientes->listarTodo();
 
@@ -1253,7 +1241,55 @@ class Home extends Controller
             $codigoHTML .= '</table></body></html>';
 
       echo $codigoHTML;
+  }
 
+  public function informacionIndex1()
+  {
+    $id = $_POST['id'];
+
+    $this->mdlClientes->__SET('idCustomer', (int)$id);
+    $infoIndex1 = $this->mdlClientes->listarInfoIndex1();
+    $infoIndex2 = $this->mdlClientes->listarInfoIndex2();
+
+    foreach ($infoIndex1 as $key => $value)
+    {
+      echo json_encode([
+        'idCustomer'=>$value['idCustomer'],
+        'userName'=>$value['userName'],
+        'companyName' => $value['companyName'],
+        'brandName' => $value['brandName'],
+        'email' => $value['email'],
+        'phone' => $value['phone'],
+        'website' => $value['website'],
+        'facebook' => $value['facebook'],
+        'instagram' => $value['instagram'],
+        'twitter' => $value['twitter'],
+        'pinterest' => $value['pinterest'],
+        'createdAt' => $value['createdAt'],
+        'dateUpdated' => $value['dateUpdated'],
+      ]);
+    }
+
+    foreach ($infoIndex2 as $key => $value)
+    {
+      echo json_encode([
+        'idCustomer'=>$value['idCustomer'],
+        'userName'=>$value['userName'],
+        'idAddressesv' => $value['idAddresses'],
+        'username' => $value['username'],
+        'taxId' => $value['taxId'],
+        'typeCompany' => $value['typeCompany'],
+        'owner' => $value['owner'],
+        'idNumber' => $value['idNumber'],
+        'phone' => $value['phone'],
+        'billingAddress' => $value['billingAddress'],
+        'billingCity' => $value['billingCity'],
+        'billingState' => $value['billingState'],
+        'billingCountry' => $value['billingCountry'],
+        'billingZipCode' => $value['billingZipCode'],
+        'quantityLocations' => $value['quantityLocations'],
+      ]);
+    }
   }
 
 }

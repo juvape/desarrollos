@@ -27,6 +27,12 @@
 
     <script type="text/javascript" src="<?php echo URL; ?>js/login.js"></script>
     <script type="text/javascript" src="<?php echo URL; ?>js/infoClientes.js"></script>
+    <script type="text/javascript" src="<?php echo URL; ?>js/edicionDetalles.js"></script>
 
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
 </body>
 </html>

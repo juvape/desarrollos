@@ -1,8 +1,36 @@
+@font-face {
+  font-family: Authenia;
+  src: url('../fonts/fonts-maaji/Authenia.otf');
+}
+
+@font-face {
+  font-family: Nunito-Regular;
+  src: url('../fonts/fonts-maaji/Nunito-Regular.ttf');
+}
+
 body{
   margin: 0 auto;
   padding: 0;
-  font-family: Arial, sans-serif, cursive;
+  font-family: Nunito-Regular, Arial, sans-serif, cursive !important;
   font-size: 15px;
+}
+
+.pinterest{
+  color: red;
+}
+
+.right{
+  text-align: right;
+}
+
+.btn-padding{
+  padding: 3px 6px !important;
+}
+
+.authenia{
+  font-family: Authenia !important;
+  font-size: 5vw !important;
+  font-weight: 600;
 }
 
 .user
